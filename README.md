@@ -152,7 +152,7 @@ O projeto estará disponível em `http://localhost:3000`
 ### Paleta de Cores
 - **Primária**: Vermelho Netflix (#e50914)
 - **Secundária**: Dourado (#ffd700)
-- **Background**: Gradientes escuros (#141414 → #1a1a1a)
+- **Background**: Gradientes escuros (#141414 → #1a1a1a) + imagem (source: Canvas)
 - **Texto**: Branco com variações de opacidade
 
 ### Animações e Efeitos
