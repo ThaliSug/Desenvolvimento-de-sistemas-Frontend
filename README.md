@@ -77,18 +77,18 @@ series-journal/
 
 Primeiro, você precisa clonar e executar a API do projeto:
 
-\`\`\`bash
+```bash
 git clone https://github.com/adsPucrsonline/DesenvolvimentoFrontend.git
 cd DesenvolvimentoFrontend/readingJournal-api
 npm install
 npm start
-\`\`\`
+```
 
 A API estará rodando em `http://localhost:5000`
 
 ### 2. Configure o projeto React
 
-\`\`\`bash
+```bash
 # Criar o projeto React
 npx create-react-app series-journal
 cd series-journal
@@ -98,13 +98,13 @@ npm install react-router-dom axios @mui/material @emotion/react @emotion/styled 
 
 # Copiar todos os arquivos do projeto para a pasta src/
 # (NavBar, SerieForm, SerieList, páginas, etc.)
-\`\`\`
+```
 
 ### 3. Executar o projeto
 
-\`\`\`bash
+```bash
 npm start
-\`\`\`
+```
 
 O projeto estará disponível em `http://localhost:3000`
 
@@ -189,9 +189,9 @@ O projeto consome uma API REST com os seguintes endpoints:
 
 Para executar os testes (quando implementados):
 
-\`\`\`bash
+```bash
 npm test
-\`\`\`
+```
 
 ### Tipos de Teste Planejados
 - **Unitários**: Componentes isolados
@@ -200,9 +200,9 @@ npm test
 
 ## 📦 Build para Produção
 
-\`\`\`bash
+```bash
 npm run build
-\`\`\`
+```
 
 Isso criará uma pasta `build/` com os arquivos otimizados para produção.
 
@@ -244,14 +244,14 @@ Para adicionar suas próprias imagens de background:
 1. Adicione suas imagens na pasta `src/assets/`
 2. Descomente o CSS no arquivo `App.css`:
 
-\`\`\`css
+```css
 .app {
   background-image: url('./assets/sua-imagem.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
-\`\`\`
+```
 
 ## 🤝 Contribuições
 
@@ -263,8 +263,8 @@ Projeto desenvolvido para fins educacionais na disciplina de Desenvolvimento de 
 
 ## 🏆 Desenvolvido por
 
-**[Seu Nome]**
-- 📧 Email: seu.email@edu.pucrs.br
+**Thalita Suguikawa**
+- 📧 Email: thalita.suguikawa@edu.pucrs.br
 - 🎓 Curso: Análise e Desenvolvimento de Sistemas
 - 🏫 Instituição: PUCRS Online
 
