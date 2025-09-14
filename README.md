@@ -34,7 +34,7 @@ O **Series Journal** é um projeto desenvolvido para a disciplina de Desenvolvim
 
 ## 🏗️ Estrutura do Projeto
 
-\`\`\`
+```
 series-journal/
 ├── public/
 │   ├── index.html
@@ -63,7 +63,7 @@ series-journal/
 │   └── index.css
 ├── package.json
 └── README.md
-\`\`\`
+```
 
 ## 🚀 Como Executar o Projeto
 
