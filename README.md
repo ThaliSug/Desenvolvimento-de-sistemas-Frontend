@@ -34,7 +34,7 @@ O **Series Journal** é um projeto desenvolvido para a disciplina de Desenvolvim
 
 ## 🏗️ Estrutura do Projeto
 
-\`\`\`
+```
 series-journal/
 ├── public/
 │   ├── index.html
@@ -63,7 +63,7 @@ series-journal/
 │   └── index.css
 ├── package.json
 └── README.md
-\`\`\`
+```
 
 ## 🚀 Como Executar o Projeto
 
@@ -77,18 +77,34 @@ series-journal/
 
 Primeiro, você precisa clonar e executar a API do projeto:
 
-\`\`\`bash
+```bash
 git clone https://github.com/adsPucrsonline/DesenvolvimentoFrontend.git
 cd DesenvolvimentoFrontend/readingJournal-api
 npm install
 npm start
-\`\`\`
+```
 
 A API estará rodando em `http://localhost:5000`
 
+## Ajuste técnico na API para atualização de séries
+
+Para garantir a compatibilidade com o padrão RESTful e o funcionamento do CRUD completo, foi necessário ajustar o backend da API.
+
+- **Foi corrigida a rota PUT (/series/:id)**, permitindo atualizar uma série pelo seu ID diretamente na URL.
+- O código atualizado da rota PUT está no arquivo de rotas da API (`serieJournal-api/routes/series.js`):
+
+
+**Dessa forma, o frontend consegue se comunicar com a API como esperado, usando o formato padrão:**
+
+- O corpo da requisição JSON pode conter todos os campos da série, e o backend identifica pelo `id` da URL.
+
+> **Observação:** Nenhuma mudança nos dados de seed foi necessária. O ajuste é compatível com a estrutura original do backend da disciplina.
+
+
+
 ### 2. Configure o projeto React
 
-\`\`\`bash
+```bash
 # Criar o projeto React
 npx create-react-app series-journal
 cd series-journal
@@ -98,13 +114,13 @@ npm install react-router-dom axios @mui/material @emotion/react @emotion/styled 
 
 # Copiar todos os arquivos do projeto para a pasta src/
 # (NavBar, SerieForm, SerieList, páginas, etc.)
-\`\`\`
+```
 
 ### 3. Executar o projeto
 
-\`\`\`bash
+```bash
 npm start
-\`\`\`
+```
 
 O projeto estará disponível em `http://localhost:3000`
 
@@ -152,7 +168,7 @@ O projeto estará disponível em `http://localhost:3000`
 ### Paleta de Cores
 - **Primária**: Vermelho Netflix (#e50914)
 - **Secundária**: Dourado (#ffd700)
-- **Background**: Gradientes escuros (#141414 → #1a1a1a)
+- **Background**: Gradientes escuros (#141414 → #1a1a1a) + imagem (source: Canvas)
 - **Texto**: Branco com variações de opacidade
 
 ### Animações e Efeitos
@@ -179,6 +195,10 @@ O projeto consome uma API REST com os seguintes endpoints:
 - `PUT /series/:id` - Atualiza série
 - `DELETE /series/:id` - Remove série
 
+Correção REST: Atualização de Séries
+A rota PUT /series/:id foi implementada/corrigida no backend para seguir o padrão RESTful, permitindo atualizar uma série pelo seu id na URL.
+A requisição de atualização agora é compatível com padrão REST, tornando o CRUD 100% funcional.
+
 ### Validações Implementadas
 - Validação em tempo real dos campos
 - Tratamento de erros da API
@@ -189,9 +209,9 @@ O projeto consome uma API REST com os seguintes endpoints:
 
 Para executar os testes (quando implementados):
 
-\`\`\`bash
+```bash
 npm test
-\`\`\`
+```
 
 ### Tipos de Teste Planejados
 - **Unitários**: Componentes isolados
@@ -200,9 +220,9 @@ npm test
 
 ## 📦 Build para Produção
 
-\`\`\`bash
+```bash
 npm run build
-\`\`\`
+```
 
 Isso criará uma pasta `build/` com os arquivos otimizados para produção.
 
@@ -237,21 +257,10 @@ Visualização completa com todas as funcionalidades
 ### Sobre (`/about`)
 Informações sobre o projeto e tecnologias
 
-## 🎨 Personalização de Background
-
-Para adicionar suas próprias imagens de background:
-
-1. Adicione suas imagens na pasta `src/assets/`
-2. Descomente o CSS no arquivo `App.css`:
-
-\`\`\`css
-.app {
-  background-image: url('./assets/sua-imagem.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-\`\`\`
+➕ Melhorias Sugeridas para Futuros Desenvolvimentos
+- Possibilidade de cadastrar múltiplas categorias com MultiSelect e armazenar como array, para análises/estatísticas mais precisas.
+- Exibição/aplicação de tema ajustável (dark/light) e filtros avançados nos cards.
+- Validações adicionais no backend para maior segurança e consistência dos dados.
 
 ## 🤝 Contribuições
 
@@ -263,8 +272,8 @@ Projeto desenvolvido para fins educacionais na disciplina de Desenvolvimento de 
 
 ## 🏆 Desenvolvido por
 
-**[Seu Nome]**
-- 📧 Email: seu.email@edu.pucrs.br
+**Thalita Suguikawa**
+- 📧 Email: thalita.suguikawa@edu.pucrs.br
 - 🎓 Curso: Análise e Desenvolvimento de Sistemas
 - 🏫 Instituição: PUCRS Online
 
