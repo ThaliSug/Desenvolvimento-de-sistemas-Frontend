@@ -115,4 +115,3 @@ nomealuno-projeto-fase-2.zip
 
 ## ✅ Tudo Pronto!
 
-Seu projeto está completo e pronto para impressionar! 🚀
