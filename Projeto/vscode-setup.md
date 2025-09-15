@@ -23,7 +23,7 @@ Para uma melhor experiência de desenvolvimento, instale essas extensões no VSC
 
 Crie um arquivo `.vscode/settings.json` na raiz do projeto:
 
-\`\`\`json
+```json
 {
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
@@ -37,13 +37,13 @@ Crie um arquivo `.vscode/settings.json` na raiz do projeto:
     "*.jsx": "javascriptreact"
   }
 }
-\`\`\`
+```
 
 ## 🎨 Snippet Personalizados
 
 Adicione snippets úteis em File > Preferences > User Snippets > javascriptreact.json:
 
-\`\`\`json
+```json
 {
   "React Functional Component": {
     "prefix": "rfc",
@@ -75,13 +75,13 @@ Adicione snippets úteis em File > Preferences > User Snippets > javascriptreact
     ]
   }
 }
-\`\`\`
+```
 
 ## 🏗️ Estrutura de Pastas no VSCode
 
 Organize assim para melhor visualização:
 
-\`\`\`
+```
 series-journal/
 ├── 📁 public/
 ├── 📁 src/
@@ -94,13 +94,13 @@ series-journal/
 │   ├── 📄 App.jsx
 │   └── 📄 index.js
 └── 📄 package.json
-\`\`\`
+```
 
 ## 🔍 Debugging no VSCode
 
 Configure debugging para React criando `.vscode/launch.json`:
 
-\`\`\`json
+```json
 {
   "version": "0.2.0",
   "configurations": [
@@ -116,13 +116,13 @@ Configure debugging para React criando `.vscode/launch.json`:
     }
   ]
 }
-\`\`\`
+```
 
 ## 📋 Tasks Úteis
 
 Crie `.vscode/tasks.json` para atalhos:
 
-\`\`\`json
+```json
 {
   "version": "2.0.0",
   "tasks": [
@@ -141,7 +141,7 @@ Crie `.vscode/tasks.json` para atalhos:
     }
   ]
 }
-\`\`\`
+```
 
 ## 🎯 Atalhos Úteis do VSCode
 
@@ -157,9 +157,9 @@ Crie `.vscode/tasks.json` para atalhos:
 ## 🐛 Dicas de Debugging
 
 1. **Console.log com estilo:**
-\`\`\`javascript
+```javascript
 console.log('%c Dados da série:', 'background: #e50914; color: white; padding: 2px 5px; border-radius: 3px', serie);
-\`\`\`
+```
 
 2. **React Developer Tools:**
    - Instale a extensão do navegador
@@ -175,7 +175,7 @@ console.log('%c Dados da série:', 'background: #e50914; color: white; padding: 
 
 Mantenha imports organizados:
 
-\`\`\`javascript
+```javascript
 // 1. Imports do React
 import React, { useState, useEffect } from 'react';
 
@@ -191,13 +191,13 @@ import { seriesAPI } from '../services/seriesAPI';
 
 // 5. Imports de estilos
 import './ComponentName.css';
-\`\`\`
+```
 
 ## 🚀 Scripts de Desenvolvimento
 
 Adicione ao package.json:
 
-\`\`\`json
+```json
 {
   "scripts": {
     "dev": "npm start",
@@ -206,7 +206,7 @@ Adicione ao package.json:
     "clean": "rm -rf build node_modules && npm install"
   }
 }
-\`\`\`
+```
 
 ## 🎨 Tema Recomendado
 
