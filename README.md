@@ -257,21 +257,6 @@ Visualização completa com todas as funcionalidades
 ### Sobre (`/about`)
 Informações sobre o projeto e tecnologias
 
-## 🎨 Personalização de Background
-
-Para adicionar suas próprias imagens de background:
-
-1. Adicione suas imagens na pasta `src/assets/`
-2. Descomente o CSS no arquivo `App.css`:
-
-```css
-.app {
-  background-image: url('./assets/sua-imagem.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-```
 ➕ Melhorias Sugeridas para Futuros Desenvolvimentos
 - Possibilidade de cadastrar múltiplas categorias com MultiSelect e armazenar como array, para análises/estatísticas mais precisas.
 - Exibição/aplicação de tema ajustável (dark/light) e filtros avançados nos cards.
