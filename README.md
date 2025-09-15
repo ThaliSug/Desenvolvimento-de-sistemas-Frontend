@@ -86,12 +86,12 @@ npm start
 
 A API estará rodando em `http://localhost:5000`
 
-## Ajuste técnico na API para atualização de séries (Em '''serieJournal-api/routes/series.js''')
+## Ajuste técnico na API para atualização de séries
 
 Para garantir a compatibilidade com o padrão RESTful e o funcionamento do CRUD completo, foi necessário ajustar o backend da API.
 
 - **Foi corrigida a rota PUT (/series/:id)**, permitindo atualizar uma série pelo seu ID diretamente na URL.
-- O código atualizado da rota PUT está no arquivo de rotas da API (`routes/series.js` ou `app.js`):
+- O código atualizado da rota PUT está no arquivo de rotas da API (`serieJournal-api/routes/series.js`):
 
 
 **Dessa forma, o frontend consegue se comunicar com a API como esperado, usando o formato padrão:**
