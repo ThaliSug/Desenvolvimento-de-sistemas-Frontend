@@ -1,0 +1,72 @@
+.navbar {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    rgba(229, 9, 20, 0.1) 0%, 
+    transparent 50%, 
+    rgba(229, 9, 20, 0.1) 100%
+  );
+  pointer-events: none;
+}
+
+/* Efeitos de hover nos botões da navbar */
+.navbar .MuiButton-root {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.navbar .MuiButton-root::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.navbar .MuiButton-root:hover::before {
+  left: 100%;
+}
+
+/* Logo animado */
+.navbar .MuiTypography-h6 svg {
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+  75% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar .MuiToolbar-root {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Drawer customization */
+.MuiDrawer-paper {
+  background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%) !important;
+}
+
+.MuiDrawer-paper .MuiListItem-root:hover {
+  transform: translateX(5px);
+  transition: transform 0.2s ease;
+}

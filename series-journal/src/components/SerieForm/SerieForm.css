@@ -1,0 +1,155 @@
+.serie-form-container {
+  background: linear-gradient(145deg, rgba(30, 30, 30, 0.95), rgba(20, 20, 20, 0.95)) !important;
+  backdrop-filter: blur(15px) !important;
+  border-radius: 20px !important;
+  padding: 40px !important;
+  margin: 20px auto !important;
+  max-width: 800px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(229, 9, 20, 0.2) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.serie-form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #e50914, #ffd700, #e50914);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.serie-form {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Estilização dos campos de input */
+.serie-form .MuiTextField-root {
+  margin-bottom: 16px;
+}
+
+.serie-form .MuiOutlinedInput-root {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.serie-form .MuiOutlinedInput-root:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(229, 9, 20, 0.1);
+}
+
+.serie-form .MuiOutlinedInput-root.Mui-focused {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.3);
+}
+
+/* Labels flutuantes */
+.serie-form .MuiInputLabel-root {
+  font-weight: 500;
+}
+
+.serie-form .MuiInputLabel-root.Mui-focused {
+  color: #ffd700;
+}
+
+/* Botões */
+.serie-form .MuiButton-contained {
+  background: linear-gradient(45deg, #e50914, #ff1744);
+  border-radius: 12px;
+  padding: 12px 30px;
+  font-weight: 600;
+  text-transform: none;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+  transition: all 0.3s ease;
+}
+
+.serie-form .MuiButton-contained:hover {
+  background: linear-gradient(45deg, #ff1744, #e50914);
+  box-shadow: 0 6px 25px rgba(229, 9, 20, 0.6);
+  transform: translateY(-2px);
+}
+
+.serie-form .MuiButton-outlined {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 12px 30px;
+  font-weight: 600;
+  text-transform: none;
+  transition: all 0.3s ease;
+}
+
+.serie-form .MuiButton-outlined:hover {
+  border-color: #ffd700;
+  background: rgba(255, 215, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Select (dropdown) */
+.serie-form .MuiSelect-select {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* DatePicker customization */
+.serie-form .MuiDatePicker-root {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Error states */
+.serie-form .MuiTextField-root .Mui-error {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Loading state */
+.serie-form .MuiButton-root.Mui-disabled {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .serie-form-container {
+    margin: 10px !important;
+    padding: 20px !important;
+    border-radius: 15px !important;
+  }
+
+  .serie-form .MuiGrid-container {
+    margin: 0 !important;
+  }
+
+  .serie-form .MuiButton-root {
+    width: 100%;
+    margin-bottom: 10px !important;
+  }
+}
+
+/* Tooltip customizations */
+.MuiTooltip-tooltip {
+  background: rgba(20, 20, 20, 0.95) !important;
+  color: white !important;
+  border: 1px solid rgba(229, 9, 20, 0.3) !important;
+  border-radius: 8px !important;
+  font-size: 12px !important;
+}
+
+/* Focus indicators for accessibility */
+.serie-form *:focus-visible {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+  border-radius: 4px;
+}

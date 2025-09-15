@@ -1,0 +1,238 @@
+.serie-list-container {
+  padding: 20px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Cards das séries */
+.serie-card {
+  background: linear-gradient(145deg, rgba(30, 30, 30, 0.9), rgba(20, 20, 20, 0.9)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  cursor: pointer !important;
+  position: relative !important;
+  overflow: hidden !important;
+  height: 280px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.serie-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #e50914, #ffd700, #e50914);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.serie-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 40px rgba(229, 9, 20, 0.4) !important;
+  border-color: rgba(229, 9, 20, 0.5) !important;
+}
+
+.serie-card:hover::before {
+  opacity: 1;
+}
+
+/* Efeito de brilho nos cards */
+.serie-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+  transform: rotate(45deg);
+  transition: transform 0.8s ease;
+  pointer-events: none;
+}
+
+.serie-card:hover::after {
+  transform: rotate(45deg) translateX(100%);
+}
+
+/* Animação dos chips */
+.serie-card .MuiChip-root {
+  transition: all 0.3s ease;
+}
+
+.serie-card:hover .MuiChip-root {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Botões de ação */
+.serie-card .MuiCardActions-root {
+  padding: 8px 16px !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.serie-card .MuiIconButton-root {
+  transition: all 0.2s ease !important;
+  border-radius: 10px !important;
+  margin: 0 2px !important;
+}
+
+.serie-card .MuiIconButton-root:hover {
+  transform: scale(1.1) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Efeitos específicos por cor dos botões */
+.serie-card .MuiIconButton-colorPrimary:hover {
+  background-color: rgba(33, 150, 243, 0.2) !important;
+  box-shadow: 0 0 15px rgba(33, 150, 243, 0.3) !important;
+}
+
+.serie-card .MuiIconButton-colorError:hover {
+  background-color: rgba(229, 9, 20, 0.2) !important;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.3) !important;
+}
+
+.serie-card .MuiIconButton-colorInfo:hover {
+  background-color: rgba(0, 188, 212, 0.2) !important;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.3) !important;
+}
+
+/* Campo de busca */
+.serie-list-container .MuiTextField-root {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.serie-list-container .MuiOutlinedInput-root:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.serie-list-container .MuiOutlinedInput-root.Mui-focused {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.2);
+}
+
+/* Animações de entrada */
+.serie-card {
+  animation: slideInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.serie-card:nth-child(1) { animation-delay: 0.1s; }
+.serie-card:nth-child(2) { animation-delay: 0.2s; }
+.serie-card:nth-child(3) { animation-delay: 0.3s; }
+.serie-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estados vazios */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+.empty-state .MuiSvgIcon-root {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Dialogs */
+.MuiDialog-paper {
+  background: linear-gradient(145deg, rgba(30, 30, 30, 0.95), rgba(20, 20, 20, 0.95)) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(229, 9, 20, 0.2) !important;
+  border-radius: 16px !important;
+}
+
+.MuiDialogTitle-root {
+  background: rgba(229, 9, 20, 0.1) !important;
+  border-bottom: 1px solid rgba(229, 9, 20, 0.2) !important;
+}
+
+/* Chips coloridos por categoria */
+.category-chip {
+  font-weight: bold !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Loading states */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loading-container .MuiCircularProgress-root {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .serie-list-container {
+    padding: 10px;
+  }
+
+  .serie-card {
+    height: auto !important;
+    min-height: 250px !important;
+  }
+
+  .MuiGrid-container {
+    margin: 0 !important;
+  }
+
+  .MuiGrid-item {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .serie-card .MuiCardContent-root {
+    padding: 12px !important;
+  }
+
+  .serie-card .MuiTypography-h6 {
+    font-size: 1rem !important;
+  }
+
+  .serie-card .MuiChip-root {
+    font-size: 0.6rem !important;
+  }
+}
+
+/* Scrollbar personalizada para dialogs */
+.MuiDialogContent-root::-webkit-scrollbar {
+  width: 6px;
+}
+
+.MuiDialogContent-root::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.MuiDialogContent-root::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 3px;
+}
+
+.MuiDialogContent-root::-webkit-scrollbar-thumb:hover {
+  background: #ff0a16;
+}
